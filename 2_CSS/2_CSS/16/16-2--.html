@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>16-2</title>
+		<style>
+			div {
+				border: 1px solid gray;
+				width: 200px;
+				height: 200px;
+				margin: 100px auto;
+				background-image: url("bgimg.png");
+			}
+
+			.css1 {
+				animation: mystory 3s linear 0s infinite normal;
+			}
+
+			@keyframes mystory {
+				0% {
+					transform: rotate(0deg);
+				}
+
+				100% {
+					transform: rotate(360deg);
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="css1"></div>
+	</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>18-1-2</title>
+		<style>
+			.parent1 {
+				border: 1px solid green;
+				width: 200px;
+				height: 200px;
+				margin: 100px auto;
+			}
+
+			.child1 {
+				border: 1px solid red;
+				width: 200px;
+				height: 200px;
+				background-image: url("bgimg.png");
+				margin: 0 auto;
+			}
+
+			/*アニメーションのCSS*/
+			.parent1 {
+				transform-style: preserve-3d;
+				perspective: 105px;
+			}
+
+			.child1 {
+				animation: mystory 3s linear 0s infinite normal;
+				animation-fill-mode: both;
+			}
+
+			@keyframes mystory {
+				0% {
+					transform: rotateY(30deg) scaleX(0.5) scaleY(1);
+				}
+
+				50% {
+					transform: rotateY(30deg) scaleX(1) scaleY(0.5);
+				}
+
+				100% {
+					transform: rotateY(30deg) scaleX(0.5) scaleY(1);
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="parent1">
+			<div class="child1"></div>
+		</div>
+	</body>
+</html>
